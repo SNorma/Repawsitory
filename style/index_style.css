@@ -1,0 +1,294 @@
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .parallax, .parallax1 {
+        background-image: url('../imgs/gray.jpg');
+        min-height: 500px;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: #e9ecef; 
+    }
+
+img {
+    max-height: 100%;
+    max-width: 100%; 
+}
+
+    .parallax1 {
+        background-image: url('../imgs/blue.jpg');
+    }
+
+    .c-text {
+        margin: 25px;
+        text-align: justify;
+    }
+
+
+    #foo {
+        height: auto; 
+    }
+
+    body {
+        margin: 0;
+    }
+
+    .top-container {
+        background-image: url('../imgs/banner_2.jpg');
+        background-color: black;
+        min-height: 600px;
+        background-attachment: fixed;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 0; 
+        margin-left: auto;
+	    margin-right: auto;
+	    display: block;
+        width: 100%;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .hero {
+      margin-top: 40px;
+      height: calc(100vh - 40px);
+      background: #f2f2f2;
+      position: relative;
+      text-align: center;
+      background: url('https://www.dudleyzoo.org.uk/wp-content/uploads/elephant-house.jpg') no-repeat center center;
+      background-size: cover;
+      filter: grayscale(100%);
+
+      & h1 {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        max-width: 70%;
+        text-align: center;
+        margin: 0 auto;
+        color: #fff;
+      }
+    }
+
+    .one-is-active {
+      & .section-one {
+        width: 70%;
+      }
+
+      & .section-two {
+        width: 30%;
+      }
+    }
+
+    .two-is-active {
+      & .section-one {
+        width: 30%;
+      }
+
+      & .section-two {
+        width: 70%;
+      }
+    }
+
+    .menu {
+      height: 40px;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      background: darkseagreen;
+      width: 100%;
+      top: 0;
+      z-index: 100;
+      color: #fff;
+    }
+
+    .container {
+      width: 100%;
+      height: calc(90vh - 40px);
+      overflow: hidden;
+    }
+
+    .section-one {
+      width: 50%;
+      float: left;
+      height: 100%;
+      background: #666;
+      position: relative;
+      transform: skew(-9deg);
+      z-index: 1;
+      transition: width 0.5s;
+
+       &:before {
+        content: "";
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        background: #666;
+        top: 0;
+        left: 0;
+        transform: skew(9deg);
+        z-index: -1;
+      }
+    }
+
+    .section-two {
+      width: 50%;
+      float: left;
+      height: 100%;
+      background: #999;
+      transform: skew(-9deg);
+      position: relative;
+      z-index: 1;
+      transition: width 0.5s;
+
+      &:after {
+        content: "";
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        background: #999;
+        top: 0;
+        right: 0;
+        transform: skew(9deg);
+        z-index: -1;
+      }
+    }
+
+    .content {
+      transform: skew(9deg);
+      padding: 20px;
+      color: #fff;
+      text-align: center;
+    }
+
+    .cta {
+      height: 10vh;
+      background: #ddd;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .scroll {
+      position: absolute;
+      bottom: 20px;
+      margin: 0 auto;
+      display: inline-block;
+      left: auto;
+      right: auto;
+      transform: rotate(-180deg);
+      font-size: 30px;
+      cursor: pointer;
+      color: #fff;
+    }
+
+//Setup
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+$crimson: lighten(crimson, 5%);
+$tomato: lighten(tomato, 5%);
+
+html, body, h1 {
+  margin: 0;
+}
+
+.footer {
+  padding: 20px;
+}
+
+//Demo
+h1 {
+  font-size: 120px;
+  line-height: 1;
+  color: white;
+}
+.dark {
+  color: #282828;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.deck {
+  min-height: 100vh;
+  position: relative;
+}
+
+.section-transition {
+  position: relative;
+}
+
+//Deck1 - Split text effect
+$transition-time: 1s;
+$transition-ease: ease;
+.deck1 {
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  overflow: hidden;
+  
+  .bg {
+    width: 100%;
+    height: 50%;
+
+    position: absolute;
+    left: 0;
+  
+    background: blue;
+    background: seagreen;
+    overflow: hidden;
+
+    &.top {
+      top: 0;
+    }
+    &.bottom {
+      bottom: 0;
+    }
+  }
+}
+.split-text {
+  $height: 3em;
+  width: 5em;
+  height: $height;
+  margin: auto;
+  
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  
+  font-family: sans-serif;
+  font-size: 120px;
+  line-height: 1em;
+  font-weight: 700;
+  color: #fff;
+    
+  .bg.top & {
+    height: $height/2;
+    bottom: 0;
+    z-index: 20;
+  }
+  .bg.bottom & {
+    padding-bottom: .09em;
+    top: -1.5em;
+    z-index: 10;
+    
+    vertical-align: bottom;
+    clip: rect($height/2 auto auto auto);
+  }
+}
+
+.deck2 {
+  top: 30vh;
+}
