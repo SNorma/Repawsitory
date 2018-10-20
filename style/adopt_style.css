@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-nav > li{
+  padding-left:30px;
+  padding-right:30px;
+}
+
+div.nav-space {
+    
+    height: 10px;
+    background-color:#f7cf79;
+}
+
+div.body-container {
+
+    width: 95vw;
+    height: auto; 
+    margin: auto;
+    margin-top: 5vh;
+    margin-bottom: 5vh; 
+    
+}
+
+div.alert {
+    
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; 
+}
